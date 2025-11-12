@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { FormPage } from './pages/form.page';
-import { USERS } from './data/form.data';
+import { USERS } from './data/form';
 
 
 for (const user of USERS){

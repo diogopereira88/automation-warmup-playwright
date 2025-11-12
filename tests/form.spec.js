@@ -35,7 +35,7 @@ test.describe('FORM', () => {
             await test.step ('Submit and validate success', async () => {
                 await page.getByRole('button', {name: 'Send'}).click();
                 await expect(page.getByText(FORM_MESSAGES.successTitle)).toBeVisible();
-                await expect(page.getByText(FORM_MESSAGES.successMessage)).toBeVisible();
+                await expect(page.getByText(FORM_MESSAGES.successBody)).toBeVisible();
             });
         });
     }
