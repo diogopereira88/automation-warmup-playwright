@@ -11,7 +11,7 @@ for (const c of hpCharacters) {
         await expect(page.getByRole('img', {name: c.name}))
         .toBeVisible();
         await expect(page.locator('#tableCharacterHouse' + nameWithoutSpace))
-        .toBeVisible;
+        .toBeVisible();
 
         // if (c.dateOfBirth){
         //     await expect(page.getByRole('cell', { name: c.dateOfBirth })).toBeVisible();
@@ -21,7 +21,7 @@ for (const c of hpCharacters) {
 
         const birth = c.dateOfBirth? c.dateOfBirth : 'Unknown';
         await expect(page.getByRole('cell', { name: birth }))
-        .toBeVisible;
+        .toBeVisible();
     
     });
 }
