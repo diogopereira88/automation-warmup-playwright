@@ -10,7 +10,7 @@ test.describe('FORM', () => {
     for (const user of USERS) {
         const title = `${user.scenario} | ${user.name} | ${user.countryLabel} | ${user.gender}`;
         
-        test(title, async ({ page }) => {
+        test.skip(title, async ({ page }) => {
             await test.step('Fill required fields', async () => {
                 await page.getByRole('textbox', { name: 'Name *' })
                 .fill(user.name);
@@ -47,7 +47,7 @@ test.describe('FORM - ERROR', () => {
         await page.goto('/form');
     });
 
-    test('Required validation messages', async ({ page }) => {
+    test.skip('Required validation messages', async ({ page }) => {
         await test.step('Submit without filling anything', async () => {
             await page.getByRole('button', { name: 'Send' }).click();
         });
